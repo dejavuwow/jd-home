@@ -1,0 +1,37 @@
+@function count($n){
+	@return ($n/50);
+}
+$dadacolor:#16a9ff;
+@mixin flex($data1,$data2){
+	display:flex;
+	flex-direction:$data1;
+	justify-content:$data2;
+}
+%textstyle{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+@mixin fl($data1,$data2,$data3:#fff){
+	font-size:$data1;
+	line-height:$data2;
+	color:$data3;
+}
+
+@mixin bg($data1,$data2,$data3,$data4,$data5){
+	$url:"../../assets/imgs/#{$data1}";
+	background:url($url) no-repeat $data2 $data3;
+	background-size:$data4 $data5;
+}
+
+@mixin position($ver1,$ver2,$data1,$data2,$type1:absolute){
+	position:$type1;
+	#{$ver1}:$data1;
+	#{$ver2}:$data2;
+}
+%bgsearch{
+	background-image: url(../../assets/imgs/search_bar.png);
+	background-size: 44px auto;
+	background-repeat: no-repeat;
+}
+
